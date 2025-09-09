@@ -1,0 +1,15 @@
+/* Signup page specific styles */
+body {
+    background: linear-gradient(135deg, #f6ecec 0%, #fd8c86 100%);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
