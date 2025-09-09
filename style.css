@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/uni-background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*Lines up logo and site name horizontally*/
+.logo-section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-section h1{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    
+}
+
+.logo-section img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 6%;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+/*Horizontal Navigation Styles*/
+.nav-links ul li{
+    list-style: none;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/*Underline effect on hover*/
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+/*Underline expands to full width on hover*/
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/*Centers hero text in the center of header*/
+.hero-text{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text h1{
+    font-size: 40px;
+}
+
+.hero-text p{
+    font-size: 16px;
+    margin: 10px 0 40px;
+    color: #fff;
+}
+
+nav .fa{
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*Make responsive on smaller screens*/
+@media(max-width: 700px){
+    .hero-text h1{
+        font-size: 20px;
+    }
+
+    .hero-text p{
+        font-size: 14px;
+    }
+
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 0;
+        height: 100%;
+        
+    }
+
+    .nav-links ul li{
+        padding: 10px 30px;
+    }
+
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color: #fff;
+        font-size: 24px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    
+
+}
+
